@@ -1,0 +1,12 @@
+{
+  "files": [],
+  "analyzer_meta": {
+    "name": "javascript",
+    "enabled": true,
+    "meta": {}
+  },
+  "exclude_files": [],
+  "exclude_patterns": ["**/node_modules/**", "**/dist/**"],
+  "test_files": [],
+  "test_patterns": ["**/*.test.ts", "**/*.test.js", "**/*.spec.ts", "**/*.spec.js"]
+}

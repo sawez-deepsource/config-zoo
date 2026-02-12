@@ -1,0 +1,5 @@
+# Should these be respected by the analyzer?
+vendor/
+generated/
+*.generated.ts
+build/
