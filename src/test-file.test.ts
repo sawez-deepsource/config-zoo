@@ -1,5 +1,6 @@
 // This is a test file - overrides should apply
 // jest env should be available, no-eval should be off
+//this is just a comment 
 describe("test suite", () => {
   it("should work", () => {
     expect(true).toBe(true);
