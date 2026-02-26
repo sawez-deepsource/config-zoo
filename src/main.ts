@@ -15,3 +15,35 @@ function duplicate(a: number, b: number) {
 
 MY_CUSTOM_GLOBAL.doSomething(); // should NOT error - defined in globals
 __DEV__ && console.log("debug"); // should NOT error - defined in globals
+
+// === v3 DIFF TEST — new code below ===
+
+// no-shadow — val shadows outer val
+function outerFn() {
+    const val = "outer";
+    function innerFn() {
+        const val = "inner";
+        return val;
+    }
+    return innerFn() + val;
+}
+
+// no-return-assign
+function setAndReturn(obj: any) {
+    return obj.value = 42;
+}
+
+// prefer-template
+function buildUrl(host: string, port: number): string {
+    return "http://" + host + ":" + port + "/api";
+}
+
+// no-useless-concat
+const combined = "foo" + "bar";
+
+// no-multi-str
+const multiline = "this is a \
+long string that spans \
+multiple lines";
+
+export { outerFn, setAndReturn, buildUrl, combined, multiline };
